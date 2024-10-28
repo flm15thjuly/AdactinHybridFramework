@@ -1,0 +1,267 @@
+
+=============================================================
+Maven 
+
+is Project managment tool for app development 
+
+--------------------------------------------------
+Download and Configure Maven 
+
+
+https://maven.apache.org/download.cgi
+
+
+Downloading Apache Maven 3.9.9
+
+	apache-maven-3.9.9-bin.zip 
+	
+	
+Configure maven :
+
+MAVEN_HOME   D:\FLM15thJuly\jars\apache-maven-3.9.9-bin\apache-maven-3.9.9
+
+M2_HOME D:\FLM15thJuly\jars\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin
+
+path  D:\FLM15thJuly\jars\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin
+
+to check maven is present 
+
+
+go to cmd 
+
+mvn -verison 
+
+======================================
+
+
+
+src/main/java   ==> app java code by developer  (java stuff)
+src/main/resources ==> app related reources like (non-java stuff)
+src/test/java  ==> junit cases (java stuff)
+src/test/resources  ==> test data for junit cases (non-java stuff) 
+
+
+pom.xml ==> Project Object Model 
+
+
+
+https://mvnrepository.com/
+
+
+========================================================
+File Handling 
+
+to Create File use 
+File --> 
+
+java.io 
+
+File(String) ==> this will create a  file object  but not physical file
+here Sting is the path of the file including extension
+
+createNewFile():boolean  ==> this will create a physical file 
+
+
+to Create Folder use 
+
+File(C) 
+File(String) ==> this will create a  file object  but not physical folder
+
+String is the path of the folder 
+
+mkdir():boolean ==> this will create a folder 
+
+
+=====================================
+
+System.getProperty("user.dir") ==> this will give you the path of the project folder 
+
+
+https://jenkov.com/tutorials/java-internationalization/simpledateformat.html
+
+
+=============================
+Properties 
+
+.properties
+
+is flat file 
+which stores key and values 
+both in the form of Strings 
+
+
+FIS = FileInputStream class 
+
+Properties()
+
+===================================
+HashMap
+
+
+Map<K, V>(I) :
+		Entry<K, V>(I)
+		
+
+
+
+Manager		Ravi
+Team Lead 	Gopi
+Tester		Reyaz
+Developer	Sam
+
+put(K, V):V
+
+get(Object):V 
+
+keySet():Set<K>
+
+values():Collection
+
+
+HashMap(C)
+
+HashMap()  ==> 16 capacity 
+HashMap(int)
+HashMap(int, float)
+HashMap(Map<? extends K, ? extends V>)
+
+
+entrySet(): Set<Entry<K,V>>
+
+getKey():K
+getValue():V 
+
+containsKey(Object):boolean
+containsValue(Object):boolean
+
+===========================================
+Excel
+
+
+								
+				
+				
+				
+Apache 
+
+POI jars 
+
+
+								Excel
+								
+								
+								
+				.xls							.xlsx 
+				
+			HSSFWorkbook(C)		Workbook(I)		XSSFWorkbook(C)
+			HSSFSheet(C)		Sheet(I)		XSSFSheet(C)
+			HSSFRow(C)			Row(I)			XSSFRow(C)
+			HSSFCell(C)			Cell(I)			XSSFCell(C)
+			
+			
+methods in workbook :
+
+getSheet():XSSFSheet 
+
+
+
+----------------------------
+methods in Sheet :
+
+ws.getLastRowNum():int  count starts from zero 
+
+ws.getPhysicalNumberOfRows():int , count starts from 1 , it will retun the count excluding blank rows 
+
+ws.getRow(1):XSSFRow 
+
+
+-------------------------------
+methods in Row :
+
+row.getLastCellNum():short counts from one 
+				
+
+------------------------------------
+methods in cell :
+
+cell.getCellType():CellType
+
+CellType contains below Fields 
+
+BLANK
+STRING 
+NUMERIC
+BOOLEAN
+
+
+setCellValue():
+		
+===========================================
+Writing Excel
+
+case1 : modifying an existing cell 
+
+
+java.io.FileNotFoundException: D:\FLM15thJuly\jars\Book1.xlsx (The process cannot access the file because it is being used by another process)
+
+FileNotFoundException :
+
+Reason : excel File is in open state 
+
+solution : close the file before running the script
+
+
+case 2: creating a new cell in existing cell 
+
+	
+case 3: create a cell in a new row 
+
+========================================================
+Project 1 :
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.adactinhotelapp</groupId>
+  <artifactId>AdactinHybridFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+
+src/main/java
+src/main/resources
+src/test/java
+		|
+		base
+		|
+		keywords
+		|
+		pages
+		|
+		testcases
+			|
+			regression
+			|
+			smoke	
+		|
+		utils
+		
+src/test/resources
+		|
+		properties
+		|
+		testdata
+			|
+			excel
+				
+screenshots
+reports
+
+
+==================================
+Data Paramterization 
+
+using @DataProvider in TestNG 
+
+reyaz0806	reyaz123  	Adactin.com - Search Hotel
+reyaz0806 	reyaz456	Adactin.com - Hotel Reservation System
+reyaz1212	reyaz123 	Adactin.com - Hotel Reservation System
+reyaz1212	reyaz456	Adactin.com - Hotel Reservation System
