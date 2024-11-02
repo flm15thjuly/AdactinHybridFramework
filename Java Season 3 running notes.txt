@@ -265,3 +265,48 @@ reyaz0806	reyaz123  	Adactin.com - Search Hotel
 reyaz0806 	reyaz456	Adactin.com - Hotel Reservation System
 reyaz1212	reyaz123 	Adactin.com - Hotel Reservation System
 reyaz1212	reyaz456	Adactin.com - Hotel Reservation System
+
+=======================================================
+
+Keyword Driven Framework 
+
+
+Here Keywords are nothing but the method names given to steps in Test cases 
+
+
+
+==========================================================
+
+Page Object Model (POM) 
+
+also called Object Repository Model 
+
+Create a Class for Each page of application 
+
+
+variables -  WebElements
+
+methods - actions that can be performed on WebElements
+
+we use Page Factory for POM 
+
+
+for Page class intialiization we use PageFactory method 
+
+initElements
+
+===================================================
+
+Reporting and Logging 
+
+
+Extent Reports , Allure Reports etc ..
+
+com.aventstack » extentreports
+
+ExtentReports
+
+ExtentTest
+
+ExtentSparkReporter
+
