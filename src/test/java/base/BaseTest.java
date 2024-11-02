@@ -12,16 +12,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 	
-	public WebDriver driver;
-	FileInputStream fis1;
-	Properties configProp;
+	public static WebDriver driver;
+	public static FileInputStream fis1;
+	public static Properties configProp;
+	public static FileInputStream fis2;
+	public static Properties locatorsProp;
 	
-	@BeforeMethod
-	public void setUp()
+	@BeforeTest
+	public void fileReadSet()
 	{
+		
 		try {
 			fis1=new FileInputStream("src\\test\\resources\\properties\\config.properties");
 		} catch (FileNotFoundException e) {
@@ -37,6 +41,30 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		try {
+			fis2=new FileInputStream("src\\test\\resources\\properties\\locators.properties");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		locatorsProp = new Properties();
+		
+		try {
+			locatorsProp.load(fis2);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	//@BeforeMethod
+	public void setUp()
+	{
+		
 		
 		String browserName = configProp.getProperty("browser");
 		
