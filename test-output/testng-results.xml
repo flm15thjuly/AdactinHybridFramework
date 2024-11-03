@@ -2,46 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-02T21:49:44 IST" name="Default suite" finished-at="2024-11-02T21:50:23 IST" duration-ms="38778">
+  <suite started-at="2024-11-03T21:32:27 IST" name="Default suite" finished-at="2024-11-03T21:32:57 IST" duration-ms="29617">
     <groups>
     </groups>
-    <test started-at="2024-11-02T21:49:44 IST" name="Default test" finished-at="2024-11-02T21:50:23 IST" duration-ms="38778">
-      <class name="testscripts.regression.ValidateLoginUsingPOMDataProviderExcel">
-        <test-method is-config="true" signature="fileReadSet()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOMDataProviderExcel@4c60d6e9]" started-at="2024-11-02T21:49:44 IST" name="fileReadSet" finished-at="2024-11-02T21:49:44 IST" duration-ms="269" status="PASS">
+    <test started-at="2024-11-03T21:32:27 IST" name="Default test" finished-at="2024-11-03T21:32:57 IST" duration-ms="29617">
+      <class name="testscripts.regression.SalesForceLogin">
+        <test-method signature="salesForceLoginTest()[pri:0, instance:testscripts.regression.SalesForceLogin@e350b40]" started-at="2024-11-03T21:32:27 IST" name="salesForceLoginTest" finished-at="2024-11-03T21:32:57 IST" duration-ms="29569" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fileReadSet -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateLoginUsingPOMDataProviderExcel@4c60d6e9]" started-at="2024-11-02T21:49:45 IST" name="setUp" finished-at="2024-11-02T21:49:48 IST" duration-ms="3553" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@1163a27]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateLogin(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateLoginUsingPOMDataProviderExcel@4c60d6e9]" started-at="2024-11-02T21:49:48 IST" name="validateLogin" data-provider="getTestData" finished-at="2024-11-02T21:50:19 IST" duration-ms="30792" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{expected Title=Adactin.com - Search Hotel, password=reyaz123, username=reyaz0806}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOMDataProviderExcel@4c60d6e9]" started-at="2024-11-02T21:50:19 IST" name="teardown" finished-at="2024-11-02T21:50:22 IST" duration-ms="3262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushReports()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOMDataProviderExcel@4c60d6e9]" started-at="2024-11-02T21:50:22 IST" name="flushReports" finished-at="2024-11-02T21:50:23 IST" duration-ms="264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushReports -->
-      </class> <!-- testscripts.regression.ValidateLoginUsingPOMDataProviderExcel -->
+        </test-method> <!-- salesForceLoginTest -->
+      </class> <!-- testscripts.regression.SalesForceLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

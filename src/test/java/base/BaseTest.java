@@ -3,6 +3,7 @@ package base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -74,10 +75,10 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	public void setUp(ITestContext context)
+	public void setUp(Method method)
 	{
 		
-		test=reports.createTest(context.getName());
+		test=reports.createTest(method.getName());
 		
 		String browserName = configProp.getProperty("browser");
 		

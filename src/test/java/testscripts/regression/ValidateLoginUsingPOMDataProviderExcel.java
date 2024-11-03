@@ -14,7 +14,7 @@ import utils.UtilKit;
 public class ValidateLoginUsingPOMDataProviderExcel extends BaseTest {
 
 	@Test(dataProvider = "getTestData")
-	public void validateLogin(HashMap<String, String>  testDataMap)
+	public void validateLoginTest(HashMap<String, String>  testDataMap)
 	{
 		
 		LoginPage loginPage=new LoginPage();
